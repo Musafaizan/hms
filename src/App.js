@@ -5,13 +5,13 @@ import HeroSection from "./components/heroSection/HeroSection";
 import ProblemSolution from "./components/ProblemSolution/page";
 import Features from "./components/features/Features";
 import Process from "./components/process/Process";
-import WhyUs from "./components/why/whyus"
+import whyUs  from "./components/why/whyUs"
 import Testimonials from "./components/testimonials/Testimonials";
 import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">   
      <>
      
      <Header/>
@@ -19,7 +19,7 @@ function App() {
      <ProblemSolution/>
      <Features/>
      <Process/>
-     <WhyUs/>
+     <whyUs/>
      <Testimonials/>
      <Footer/>
      
