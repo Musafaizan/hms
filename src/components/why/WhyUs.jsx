@@ -1,8 +1,8 @@
 import React from 'react';
-import { Shield, Lock, DollarSign, MapPin } from 'lucide-react';
+import {  Lock, DollarSign, MapPin } from 'lucide-react';
 import './WhyUs.css';
 
-const WhyUs = () => {
+const WhyUs = () => {   
   const reasons = [
     {
       icon: <MapPin size={32} />,
