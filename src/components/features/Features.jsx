@@ -5,30 +5,6 @@ import './Features.css';
 
 const featuresData = [
   {
-    id: 1,
-    title: 'Staff Management',
-    headline: 'Unified Workforce Control',
-    icon: 'Users',
-    description: 'Comprehensive staff management with role-based access and automated rostering.',
-    capabilities: [
-      'Role-Based Access: Secure permissions for Doctors, Nurses, and Admin',
-      'Shift Management: Automated rostering and attendance tracking',
-      'HR Integration: Linked directly to payroll and performance KPIs'
-    ]
-  },
-  {
-    id: 2,
-    title: 'Patient Registration & Medical History',
-    headline: 'One Patient, One Record',
-    icon: 'FileText',
-    description: 'Centralized patient data management with secure, CBAHI-compliant archiving.',
-    capabilities: [
-      'Centralized Data: Demographics, history, and documents in one view',
-      'Universal Search: Find patient records instantly across any department',
-      'Secure Archiving: CBAHI-compliant history tracking and storage'
-    ]
-  },
-  {
     id: 3,
     title: 'Appointments & Encounters',
     headline: 'Seamless Patient Flow',
@@ -41,27 +17,15 @@ const featuresData = [
     ]
   },
   {
-    id: 4,
-    title: 'Prescriptions & Medication Management',
-    headline: 'Error-Free Dispensing',
-    icon: 'Pill',
-    description: 'Digital prescriptions with automated safety checks and drug interaction alerts.',
+    id: 8,
+    title: 'Insurance Policies & Claims',
+    headline: 'NPHIES-Ready Insurance',
+    icon: 'Shield',
+    description: 'Real-time eligibility checks and automated claims management.',
     capabilities: [
-      'e-Prescribing: Digital orders sent instantly to the pharmacy',
-      'Drug Interaction Alerts: Automated safety warnings for doctors',
-      'Dosage Templates: Standardized protocols for common treatments'
-    ]
-  },
-  {
-    id: 5,
-    title: 'Lab, Imaging & Diagnostic Orders',
-    headline: 'Integrated Diagnostics',
-    icon: 'TestTube',
-    description: 'Seamless diagnostic ordering with automatic result syncing.',
-    capabilities: [
-      'Direct Ordering: Request labs/imaging from the consultation screen',
-      'PACS/LIMS Link: Auto-sync results back to the patient file',
-      'Status Tracking: Monitor "Sample Collected" to "Result Ready"'
+      'Real-Time Eligibility: Instant NPHIES check before consultation',
+      'Claims Management: Automated scrubbing to reduce rejections',
+      'Policy Rules: Auto-apply co-pays and deductibles'
     ]
   },
   {
@@ -89,15 +53,39 @@ const featuresData = [
     ]
   },
   {
-    id: 8,
-    title: 'Insurance Policies & Claims',
-    headline: 'NPHIES-Ready Insurance',
-    icon: 'Shield',
-    description: 'Real-time eligibility checks and automated claims management.',
+    id: 4,
+    title: 'Prescriptions & Medication Management',
+    headline: 'Error-Free Dispensing',
+    icon: 'Pill',
+    description: 'Digital prescriptions with automated safety checks and drug interaction alerts.',
     capabilities: [
-      'Real-Time Eligibility: Instant NPHIES check before consultation',
-      'Claims Management: Automated scrubbing to reduce rejections',
-      'Policy Rules: Auto-apply co-pays and deductibles'
+      'e-Prescribing: Digital orders sent instantly to the pharmacy',
+      'Drug Interaction Alerts: Automated safety warnings for doctors',
+      'Dosage Templates: Standardized protocols for common treatments'
+    ]
+  },
+  {
+    id: 5,
+    title: 'Lab, Imaging & Diagnostic Orders',
+    headline: 'Integrated Diagnostics',
+    icon: 'TestTube',
+    description: 'Seamless diagnostic ordering with automatic result syncing.',
+    capabilities: [
+      'Direct Ordering: Request labs/imaging from the consultation screen',
+      'PACS/LIMS Link: Auto-sync results back to the patient file',
+      'Status Tracking: Monitor "Sample Collected" to "Result Ready"'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Patient Registration & Medical History',
+    headline: 'One Patient, One Record',
+    icon: 'FileText',
+    description: 'Centralized patient data management with secure, CBAHI-compliant archiving.',
+    capabilities: [
+      'Centralized Data: Demographics, history, and documents in one view',
+      'Universal Search: Find patient records instantly across any department',
+      'Secure Archiving: CBAHI-compliant history tracking and storage'
     ]
   },
   {
@@ -113,6 +101,18 @@ const featuresData = [
     ]
   },
   {
+    id: 11,
+    title: 'Inventory (Pharmacy & Medical Supplies)',
+    headline: 'Smart Supply Chain',
+    icon: 'Package',
+    description: 'Live stock tracking with expiry alerts and auto-replenishment.',
+    capabilities: [
+      'Live Deduction: Stock decreases instantly when medicine is dispensed',
+      'Expiry Tracking: Alerts for near-expiry batches (CBAHI Requirement)',
+      'Auto-Replenishment: Purchase orders generated when stock hits low levels'
+    ]
+  },
+  {
     id: 10,
     title: 'Emergency & Allergy Records',
     headline: 'Critical Patient Safety',
@@ -125,15 +125,15 @@ const featuresData = [
     ]
   },
   {
-    id: 11,
-    title: 'Inventory (Pharmacy & Medical Supplies)',
-    headline: 'Smart Supply Chain',
-    icon: 'Package',
-    description: 'Live stock tracking with expiry alerts and auto-replenishment.',
+    id: 1,
+    title: 'Staff Management',
+    headline: 'Unified Workforce Control',
+    icon: 'Users',
+    description: 'Comprehensive staff management with role-based access and automated rostering.',
     capabilities: [
-      'Live Deduction: Stock decreases instantly when medicine is dispensed',
-      'Expiry Tracking: Alerts for near-expiry batches (CBAHI Requirement)',
-      'Auto-Replenishment: Purchase orders generated when stock hits low levels'
+      'Role-Based Access: Secure permissions for Doctors, Nurses, and Admin',
+      'Shift Management: Automated rostering and attendance tracking',
+      'HR Integration: Linked directly to payroll and performance KPIs'
     ]
   },
   {
@@ -158,7 +158,6 @@ const Features = () => {
     return IconComponent ? <IconComponent size={24} strokeWidth={2.2} /> : <Icons.Settings size={24} />;
   };
 
-  // Animation for main content block
   const contentVariants = {
     hidden: { opacity: 0, y: 30, filter: 'blur(4px)' },
     visible: {
@@ -175,7 +174,6 @@ const Features = () => {
     }
   };
 
-  // Staggered animation for list items
   const listItemVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: (custom) => ({
@@ -206,12 +204,8 @@ const Features = () => {
                 key={feature.id}
                 className={`feature-menu-item ${selectedFeature.id === feature.id ? 'active' : ''}`}
                 onClick={() => setSelectedFeature(feature)}
-                aria-label={`Select ${feature.title}`}
-                aria-current={selectedFeature.id === feature.id ? 'page' : undefined}
               >
-                <span className="feature-menu-icon">
-                  {getIcon(feature.icon)}
-                </span>
+                <span className="feature-menu-icon">{getIcon(feature.icon)}</span>
                 <span className="feature-menu-text">{feature.title}</span>
               </button>
             ))}
@@ -271,3 +265,7 @@ const Features = () => {
 };
 
 export default Features;
+
+
+
+
