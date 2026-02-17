@@ -6,6 +6,7 @@ import logo1 from "../../assets/logo1.png";
 import logo2 from "../../assets/logo2.png";
 import logo3 from "../../assets/logo3.png";
 import logo4 from "../../assets/logo4.png";
+import img1 from "../../assets/dashboard.jpeg";
 
 const logos = [logo1, logo2, logo3, logo4];
 
@@ -47,7 +48,7 @@ const HeroSection = () => {
 
             <p className="hero-subtitle">
               Fully compliant with NPHIES and CBAHI standards. Unify your
-              clinical, financial, and AI-enhanced operations on a single  platform.
+              clinical, financial, and AI-enhanced operations on a single platform.
             </p>
 
             <button className="hero-cta" onClick={handleDemoRequest}>
@@ -75,37 +76,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* RIGHT COLUMN - Dashboard */}
+        {/* RIGHT COLUMN - Hero Image */}
         <div className="hero-right">
-          <div className="dashboard-mockup">
-            <div className="mockup-header">
-              <div className="mockup-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div className="mockup-title">Hospital Dashboard</div>
-            </div>
-
-            <div className="mockup-content">
-              <div className="mockup-sidebar">
-                <div className="mockup-menu-item active"></div>
-                <div className="mockup-menu-item"></div>
-                <div className="mockup-menu-item"></div>
-                <div className="mockup-menu-item"></div>
-              </div>
-
-              <div className="mockup-main">
-                <div className="mockup-stat-grid">
-                  <div className="mockup-stat"></div>
-                  <div className="mockup-stat"></div>
-                  <div className="mockup-stat"></div>
-                  <div className="mockup-stat"></div>
-                </div>
-                <div className="mockup-chart"></div>
-              </div>
-            </div>
-          </div>
+          <img src={img1} alt="Hospital Management System" className="hero-img" />
         </div>
       </div>
     </section>

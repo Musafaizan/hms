@@ -41,13 +41,13 @@ const badges = [
             <div className="footer-contact">
               <a href="tel:+966123456789" className="contact-link">
                 <Phone size={18} />
-                <span>+966 12 345 6789</span>
+                <span>+966 53 680 6458</span>
               </a>
               <a href="mailto:info@hms-ksa.com" className="contact-link">
                 <Mail size={18} />
-                <span>info@hms-ksa.com</span>
+                <span>sales@hashverx.com</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+              <a href="https://www.linkedin.com/company/hashverx/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="contact-link">
                 <Linkedin size={18} />
                 <span>LinkedIn</span>
               </a>
